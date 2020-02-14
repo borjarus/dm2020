@@ -1,0 +1,13 @@
+{
+    "name": "borjarus/dm2020",
+    "description": "",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Miroslaw Puczynski",
+            "email": "miroslaw@puczynski.org"
+        }
+    ],
+    "require": {},
+    "require-dev": {}
+}
