@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Star Wars - Planets</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <td scope="col">Name</td>
+      <td scope="col">Rotation Period</td>
+      <td scope="col">Orbital Period</td>
+      <td scope="col">Climate</td>
+      <td scope="col">Gravity</td>
+      <td scope="col">Terrain</td>
+      <td scope="col">Population</td>
+    </tr>
+  <thead>
+  <tbody>
+  {% for planet in planets %}
+    <tr>
+      <td>{{planet.name}}</td>
+      <td>{{planet.rotationPeriod}}</td>
+      <td>{{planet.orbitalPeriod}}</td>
+      <td>{{planet.climate|join(',')}}</td>
+      <td>{{planet.gravity}}</td>
+      <td>{{planet.terrain|join(',')}}</td>
+      <td>{{planet.population}}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</body>
+</html>

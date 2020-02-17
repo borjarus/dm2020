@@ -25,14 +25,11 @@ class PlanetController {
      * @param Request $request
      * @param Response $response
      * 
-     * @return Response
+     * @return array
      */
-    public function getAllPlanet(Request $request, Response $response): Response {
+    public function getAllPlanet(Request $request, Response $response): array {
         $planetService = new PlanetService($this->httpClient, $this->repository);
-        $planets = $planetService->getPlanets();
-
-        $response->getBody()->write('Star Wars Planet API');
-        return $response;
+        return $planetService->getPlanets();
     }
 }
 
