@@ -44,9 +44,9 @@ class PlanetRepository
 
     public function save(Planet $planet)
     {
-        $planetId = $planet->setId($this->generateId());
+        $planet->setId($this->generateId());
         $this->persistence->persist([
-            'id' => $planetId,
+            'id' => $planet->getId(),
             'name' => $planet->getName(),
             'rotationPeriod' => $planet->getRotationPeriod(),
             'orbitalPeriod' => $planet->getOrbitalPeriod(),
@@ -55,6 +55,6 @@ class PlanetRepository
             'terrain' => $planet->getTerrain(),
             'surfaceWater' => $planet->getSurfaceWater(),
             'population' => $planet->getPopulation(),
-        ]);
-    }
+            ]);
+        }
 }
