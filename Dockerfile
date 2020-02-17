@@ -4,6 +4,6 @@ COPY . /usr/src/myapp
 
 WORKDIR /usr/src/myapp
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["php", "-a"]
+CMD ["php", "-S", "0.0.0.0:80", "web/index.php"]
